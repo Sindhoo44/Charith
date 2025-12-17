@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Galle Sri Lanka | Charith Tours</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Explore Galle Sri Lanka with Charith Tours. Visit Galle Fort, beaches, colonial streets, and enjoy unforgettable travel experiences." />
+    <meta name="keywords" content="Galle Sri Lanka, Charith Tours, Galle Fort, Beaches Sri Lanka, Travel Sri Lanka, Southern Sri Lanka Tourism" />
+
+    <!-- Social Media Open Graph -->
+    <meta property="og:title" content="Galle Sri Lanka | Charith Tours" />
+    <meta property="og:description" content="Discover the historic city of Galle with Charith Tours. Explore Galle Fort, pristine beaches, and vibrant coastal culture." />
+    <meta property="og:image" content="imgs/galle.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+    />
+
+    <style>
+        .galle-img img {
+            width: 100%;
+            max-height: 600px; /* tall image */
+            object-fit: cover; /* maintain aspect ratio and crop nicely */
+            border-radius: 10px;
+        }
+
+        @media (max-width: 767px) {
+            .galle-img img {
+                max-height: 400px; /* smaller on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="container py-5">
+    <div class="row align-items-center">
+        <!-- IMAGE LEFT -->
+        <div class="col-md-6 galle-img text-center mb-4 mb-md-0">
+            <img 
+                src="imgs/galle.png" 
+                alt="Galle Fort and Southern Coastline Sri Lanka" 
+                class="img-fluid shadow"
+                loading="lazy"
+            />
+        </div>
+
+        <!-- TEXT RIGHT -->
+        <div class="col-md-6">
+            <h1 class="fw-bold text-dark">Galle Sri Lanka</h1>
+            <p class="text-dark fs-5">
+                Galle, located along Sri Lanka’s stunning southern coastline, is a city where history, culture, and coastal beauty converge. Best known for the iconic <strong>Galle Fort</strong>, a UNESCO World Heritage Site built by the Portuguese and expanded by the Dutch, the city features cobblestone streets, colonial architecture, boutique cafés, and breathtaking ocean views. Beyond the fort walls, Galle is surrounded by palm-lined beaches, crystal-clear waters, and vibrant marine life, making it ideal for snorkeling, surfing, and whale watching. Whether exploring historic landmarks, savoring fresh seafood, or relaxing by the sea, Galle offers a unique blend of adventure, heritage, and tropical charm.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

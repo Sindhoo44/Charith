@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO TITLE -->
+  <title>Charith Tours | Explore Sri Lanka - Travel, Beaches & Adventures</title>
+
+  <!-- META SEO -->
+  <meta name="description" content="Welcome to Charith Tours. Discover Sri Lanka's beaches, adventure locations, wildlife, camping sites, and cultural heritage destinations. Book your tour today.">
+  <meta name="keywords" content="Sri Lanka tours, Sri Lanka travel, Sri Lanka beaches, Sri Lanka tourism, explore Sri Lanka, Sri Lanka vacation, Charith Tours">
+  <meta name="author" content="Charith Tours">
+
+  <!-- SOCIAL / OG TAGS -->
+  <meta property="og:title" content="Charith Tours - Explore Sri Lanka" />
+  <meta property="og:description" content="Experience Sri Lanka with amazing beaches, adventures, historical wonders & more." />
+  <meta property="og:image" content="imgs/preview.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- FAVICON (OPTIONAL) -->
+  <!-- <link rel="icon" type="image/png" href="imgs/favicon.png"> -->
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Video File -->
+  <section class="video-section" aria-label="Hero Background Section">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="sea.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar"></nav>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+
+          document.getElementById('home').onclick = () => loadPage('home.html');
+          document.getElementById('explore').onclick = () => loadPage('explore.html');
+          document.getElementById('booking').onclick = () => loadPage('book.html');
+        });
+    </script>
+
+    <!-- HERO TEXT -->
+    <div class="overlay">
+      <h1 style="font-size: 8vh; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">
+        Welcome <br> To Sri Lanka
+      </h1>
+      <p>Scroll down to explore more</p>
+    </div>
+  </section>
+
+  <!-- ##################################################Content Below Video####################################################### -->
+
+  <main class="content-section" id="contentSection">
+    <div id="div1"></div>
+    <script>
+      fetch("home.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("div1").innerHTML = data);
+    </script>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer"></footer>
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
